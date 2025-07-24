@@ -1,10 +1,4 @@
-def greet_user(name):
-    print(f"Hello, {name}!")
-
-user_name = input("Enter your name: ")
-greet_user(user_name)
-
-
+print("Hello, World!")
 
 x = input("x: ")
 y = int(x) + 1
