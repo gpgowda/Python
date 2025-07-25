@@ -1,0 +1,16 @@
+import asyncio
+
+
+async def download_file(filename, delay):
+    print(f"Start downloading {filename}.....")
+    await asyncio.sleep(delay)  # Stimulates download delay
+    print(f"Finished downloading{filename}!")
+
+
+async def main():
+    # Run both downloads concurrently
+    task1 = asyncio.create_task(download_file("file1.txt", 2))
+    task2 = asyncio.create_task(download_file("file2.txt", 3))
+
+# Run the main coroutine
+asyncio.run(main())
