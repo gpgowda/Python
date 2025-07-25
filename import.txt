@@ -1,0 +1,4 @@
+# main.py
+import utils
+
+utils.greet("Alice")  # Output: Hello, Alice!
