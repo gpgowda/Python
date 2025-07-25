@@ -1,0 +1,19 @@
+items = [1, 2, 3]  # Rule1 = A datatype must me assignable to a function
+
+print(items)
+
+
+def greet(person):  # Rule2 = A datatype should be passable to a function
+    print("Hello,", person)
+
+
+greet("Bob")      # str passed to function
+greet(123)        # int passed to function
+
+
+def get_list():  # Rule3 = A datatype should be returnable from a function
+    return (4, 5, 6)
+
+
+result = get_list()
+print(result)
