@@ -1,0 +1,49 @@
+def log_decorator(func):
+    def wrapper():
+        print("Function is about to be called.")
+        func()
+        print("Function is called.")
+    return wrapper
+
+# Applying the decorator
+
+
+@log_decorator
+def say_hello():
+    print("Hello!")
+
+
+# Calling the function
+say_hello()
+
+
+# Decorator with Arguments Example
+def greet_decorator(func):
+    def wrapper(name):
+        print("Preparing to greet...")
+        func(name)
+        print("Greeting done.")
+    return wrapper
+
+
+@greet_decorator
+def greet(name):
+    print(f"Hello, {name}!")
+
+
+greet("Alice")
+
+
+def some_function():
+    print("called")
+    # return 1
+    return some_function_2()
+    print("2 function called")
+
+
+def some_function_2():
+    return 2
+
+
+result = some_function()
+print(result)
